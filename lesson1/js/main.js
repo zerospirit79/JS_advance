@@ -5,12 +5,12 @@ const products = [{
     },
     {
         id: 2,
-        title: 'PCMouse',
+        title: 'Mouse',
         price: 1500
     },
     {
         id: 3,
-        title: 'PCKeyboard',
+        title: 'Keyboard',
         price: 5000
     },
     {
@@ -20,18 +20,19 @@ const products = [{
     },
 ];
 
-const renderProduct = (title, price, img = '') => {
+const renderProduct = (title = NotePC, price = 10000, img = 'NotePC') => {
+
     return `<div class="product-item">
-                <h3>${title}</h3>
-                <img src="https://loremflickr.com/300/240/${title}" alt="">
-                <p>${price}</p>
-                <button class="by-btn">Добавить в корзину</button>
-              </div>`;
+            <h3>${title}</h3>
+            <img src="https://loremflickr.com/300/240/${title}" alt="">
+            <p>Цена: ${price} рублей</p>
+            <button class="by-btn">Добавить в корзину</button>
+          </div>`;
+
 };
 
 const renderProducts = list => {
-    const productList = list.map(item => renderProduct(item.title, item.price));
-    console.log(productList);
+    const productList = list.map(id => renderProduct(id.title, id.price)).join('');
     document.querySelector('.products').innerHTML = productList;
 };
 

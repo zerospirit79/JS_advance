@@ -13,7 +13,7 @@ header {
 }
 
 .product-item {
-  background: 1px solid black;
+  padding: 10px;
   display: block;
 }
 
@@ -21,4 +21,7 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
+
+.by-btn {
+  cursor: pointer;
 }
