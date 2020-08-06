@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Интернет-магазин</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="https://kit.fontawesome.com/3107014760.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="app" class="wrapper">
+            <header class="center">
+                <div class="logo">
+                    <a href="#"><img class="logo-img" src="./img/logo.svg" alt="logo" /></a>
+                </div>
+                <div class="header-right-block">
+                    <search ref="search"></search>
+                    <cart ref="cart"></cart>
+                </div>
+            </header>
+            <main class="center">
+                <section class="goods-box">
+                    <products ref="products"></products>
+                </section>
+            </main>
+            <footer class="center">
+                <small>Lorem ipsum dolor sit amet.</small>
+                <small>Stanislav Zavialov. 2020</small>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./js/CartComp.js"></script>
+        <script src="./js/SearchComp.js"></script>
+        <script src="./js/ProductComp.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
